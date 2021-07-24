@@ -1,0 +1,83 @@
+{%load static%}
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>predict</title>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+         .main{
+             position:fixed;
+             top:90px;
+             left:280px;
+             bottom:80px;
+             width:700px;
+             background-color:gainsboro;
+             align-items:center;
+             border-radius:5%;
+             }
+             div{
+             padding:15px;
+             }
+             input[type=submit]{
+             background-color:black;
+             color:white;
+             cursor:pointer;
+             padding: 16px 32px;
+             }
+             h1{
+             font-size:40px;
+             color:DarkRed;
+             }
+
+        body{
+             background-image: url(" {% static 'img11.jpg' %} ");
+             background-repeat:no_repeat;
+             background-size:cover;
+        }
+    </style>
+</head>
+<body style="text-align:center">
+<div class="main">
+    <h1>Please enter the following values:</h1>
+    <form action="result">
+        <div class="row">
+            <div class="col-sm-4" style="background-color:bisque;">
+                <p> Avg Income</p>
+                <input type="text" name="n1">
+            </div>
+             <div class="col-sm-4" style="background-color:DarkSeaGreen;">
+                <p> Avg House Age</p>
+                <input type="text" name="n2">
+            </div>
+             <div class="col-sm-4" style="background-color:LightPink;">
+                <p> Avg Number of Rooms</p>
+                <input type="text" name="n3">
+            </div>
+        </div>
+        <div class="row">
+             <div class="col-sm-4" style="background-color:Turquoise;">
+                <p> Avg Number of Bedrooms</p>
+                <input type="text" name="n4">
+            </div>
+             <div class="col-sm-4" style="background-color:RosyBrown;">
+                <p> Avg Population</p>
+                <input type="text" name="n5">
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="PREDICT">
+        </div>
+    </form>
+    <div class="row">
+        <h2>{{result2}}</h2>
+    </div>
+</div>
+</body>
+</html>
+</html>
